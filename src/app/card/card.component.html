@@ -1,0 +1,17 @@
+<div [ngClass]="['card', 'bg-transparent', 'mb-3', 'shadow-sm', plan.title == 'Enterprise' ? 'border border-primary' : '']" style="width: 18rem;">
+    <div [ngClass]="['card-header', 'text-center', 'fs-4', plan.title == 'Enterprise' ? 'bg-primary text-white': '']">{{plan.title}}</div>
+    <div class="pb-3 px-3 text-center">
+        <div class="card-body text-center">
+            <h5 class="card-title">
+                <span class="fs-1">{{plan.price}}</span><span class="text-body-tertiary fs-2 display-6">/mo</span>
+            </h5>
+            <p class="card-text p-3">
+              {{plan.desc[0]}}<br>
+              {{plan.desc[1]}}<br>
+              {{plan.desc[2]}} <br>
+              {{plan.desc[3]}}
+            </p>
+          </div>
+          <button [ngClass]="['btn', 'w-100', 'fs-5', 'p-2', plan.title == 'Free' ? 'btn-outline-primary' : 'btn-primary']">{{plan.buttonText}}</button>
+    </div>
+</div>
